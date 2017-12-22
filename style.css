@@ -3,7 +3,7 @@ html, body {
     height: 100%;
 }
 
-/* canvas {
-    /* background-color: black; */
+canvas {
+    background-color: black;
     width: 100%;
-} */
+}
