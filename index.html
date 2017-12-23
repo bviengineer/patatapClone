@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Patatap Clone</title>
     <link href="style.css" rel="stylesheet">
-    <script src="paper-full.js"></script>
-    <script type="text/paperscript" canvas="myCanvas">       
+    <script type="text/javascript" src="paper-full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.7/howler.core.min.js"></script>    
+    <script type="text/paperscript" canvas="myCanvas">  
+        var circles = [];     
+
         function onKeyDown(event) {
             var maxPoint = new Point(view.size.width, view.size.height);
 
@@ -15,9 +18,19 @@
 
             var point = maxPoint * randomPoint;
 
-            new Path.Circle(point, 10).fillColor = "orange";
+            var newCircle = new Path.Circle(point, 500)
+            newCircle.fillColor = "orange";
+            circles.push(newCircle);
         }
-    </script>
+
+        function onFrame(event){
+            for(var i = 0; i < circles.length; i++){
+                circles[i].fillColor.hue += 1;
+                circles[i].scale(.9);
+            } 
+        }
+
+     </script>
 </head>
 <body>
     <canvas id="myCanvas" resizse></canvas>
