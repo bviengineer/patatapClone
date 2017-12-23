@@ -1,9 +1,20 @@
 html, body {
-    margin: 0;
-    height: 100%;
+    margin: 10px;
+    height: 95%;
+    background-color: beige;
 }
 
 canvas {
-    background-color: black;
-    width: 100%;
+    background-color: #17202A;
+    width: 80%;
+    height: 90%;
+    position: relative;
+    left: 8rem;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px #ABB2B9;
+}
+
+h3 {
+    text-align: center;
+    color: crimson;
 }
